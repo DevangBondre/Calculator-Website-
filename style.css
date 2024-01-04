@@ -1,1 +1,18 @@
+body,h1{
+    margin: 0;
+    padding: 0;
+    background-color: lightgoldenrodyellow;
+}
 
+.heading{
+    font-size: 3em;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: "Rubik Doodle Triangles",sans-serif;
+    color:brown;
+    text-align: center;
+    background-color: floralwhite;
+    height: 100px;
+    padding-top: 30px;
+    
+}
