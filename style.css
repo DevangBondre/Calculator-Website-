@@ -16,3 +16,126 @@ body,h1{
     padding-top: 30px;
     
 }
+
+.container{
+    height: 550px;
+    width: 430px;
+    /*background-color: #A9A9A9;*/
+    background-color: red;
+    border: 3px solid black;
+    border-radius: 18px;
+    position: fixed;
+    top: 20%;
+    left: 34%;
+}
+
+.screen{
+    background-color: white;
+    height: 100px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 14px;
+}
+
+
+.buttons1{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #A9A9A9;
+    
+}
+
+.buttons1 button{
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80px;
+    margin-top: 13px;
+}
+
+.ac{
+   margin-right: 11px;
+}
+
+.c{
+    margin-right:11px;
+    margin-left: 5px;
+}
+
+.mod{
+    margin-right:11px;
+    margin-left: 4px;
+}
+
+.divide{
+    margin-left: 5px;
+}
+
+
+.buttons2{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #A9A9A9;
+    
+}
+
+.buttons2 button{
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80px;
+    margin-top: 13px;
+}
+
+.seven{
+    margin-right: 11px;
+ }
+ 
+ .eight{
+     margin-right:11px;
+     margin-left: 5px;
+ }
+ 
+ .nine{
+     margin-right:11px;
+     margin-left: 4px;
+ }
+ 
+ .multiply{
+     margin-left: 5px;
+ }
+
+ .buttons3{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #A9A9A9;
+    
+}
+
+.buttons3 button{
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80px;
+    margin-top: 13px;
+}
+
+.four{
+    margin-right: 11px;
+ }
+ 
+ .five{
+     margin-right:11px;
+     margin-left: 5px;
+ }
+ 
+ .six{
+     margin-right:11px;
+     margin-left: 4px;
+ }
+ 
+ .sub{
+     margin-left: 5px;
+ }
