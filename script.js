@@ -13,11 +13,11 @@ let operator = '';
 function updateScreen(event){
     const screenContent = event.target.innerText;
     
-    if(screenContent === '+' || screenContent === '-' || screenContent === 'x' || screenContent === '/' || screenContent === '%'){
+    if(screenContent === '+' || screenContent === '-' || screenContent === 'x' || screenContent === '÷' || screenContent === '%'){
         operator = screenContent;
         num1 = screen2.textContent.trim()
-        screen2.textContent = num1 + " " + operator
-        screen1.textContent = " "
+        screen1.textContent = num1 + " " + operator
+        screen2.textContent = " "
     }
     else{
         screen2.textContent = screen2.textContent + screenContent
@@ -52,7 +52,7 @@ function calculations(){
         
     }
     else if(operator === '-'){
-        sub()
+         result = parseFloat(num1) - parseFloat(num2)
         
     }
     else if(operator === '÷'){
@@ -67,7 +67,7 @@ function calculations(){
         result = parseFloat(num1) * parseFloat(num2)
         
     }
-    screen1.textContent = " " + num2; 
+    screen1.textContent = num1 + operator +  num2; 
     screen2.textContent = result
 }
 
