@@ -10,20 +10,24 @@ let num1 = '';
 let num2 = '';
 let operator = '';
 
-function updateScreen(event){
+function updateScreen(event) {
     const screenContent = event.target.innerText;
-    
-    if(screenContent === '+' || screenContent === '-' || screenContent === 'x' || screenContent === '÷' || screenContent === '%'){
+
+    if (screenContent === '+' || screenContent === '-' || screenContent === 'x' || screenContent === '÷' || screenContent === '%') {
+        if (operator !== '') {
+            
+            num2 = screen2.textContent.trim();
+            performOperation();
+        }
+
         operator = screenContent;
-        num1 = screen2.textContent.trim()
-        screen1.textContent = num1 + " " + operator
-        screen2.textContent = " "
-    }
-    else{
-        screen2.textContent = screen2.textContent + screenContent
+        num1 = screen2.textContent.trim();
+        screen1.textContent = num1 + " " + operator;
+        screen2.textContent = " ";
+    } else {
+        screen2.textContent = screen2.textContent + screenContent;
     }
 }
-
 numberButtons.forEach(button =>{
     button.addEventListener('click',updateScreen)
 })
@@ -35,12 +39,37 @@ operand.forEach(button=>{
 function allClearScreen(){
     screen2.textContent = " "
     screen1.textContent = " "
-    
+    num1 = '';
+    num2 = '';
+    operator = '';
+    result = ''
 }
 
 ac.addEventListener('click',allClearScreen)
 ans.addEventListener('click',calculations)
 
+
+function performOperation() {
+    if (num1 !== '' && num2 !== '' && operator !== '') {
+        if (operator === '+') {
+            result = parseFloat(num1) + parseFloat(num2);
+        } else if (operator === '-') {
+            result = parseFloat(num1) - parseFloat(num2);
+        } else if (operator === '÷') {
+            result = parseFloat(num1) / parseFloat(num2);
+        } else if (operator === '%') {
+            result = parseFloat(num1) % parseFloat(num2);
+        } else if (operator === 'x') {
+            result = parseFloat(num1) * parseFloat(num2);
+        }
+
+        screen1.textContent = num1 + " " + operator + " " + num2;
+        screen2.textContent = result;
+        num1 = result.toString();
+        num2 = '';
+        operator = '';
+    }
+}
 
 function calculations(){
     num2 = screen2.textContent.trim()
